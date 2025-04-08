@@ -1,0 +1,32 @@
+A Program to show how to configure spring security with SecurityFilterChain interface and authentication by api key:
+Programs:
+* SpringBootSecurityApplication5Application.java
+* CompanyApiKeyAuthenticateFilter.java
+* SecurityConfiguration.java
+* CompanyController.java
+* CompanyDTO.java
+* Comapny.java
+* CompanyRepository.java
+* CompanyService.java
+* CompanyServiceImpl.java
+* CommonUtils.java
+Notes:
+
+Output:
+From main method in SpringBootSecurityApplication4Application class.
+
+Sql Queries:
+CREATE TABLE `company` (
+	`company_id` INT(10) NOT NULL AUTO_INCREMENT,
+	`company_name` VARCHAR(250) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`company_owner` VARCHAR(250) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`company_api_key` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`status` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_date` DATETIME NOT NULL,
+	`updated_date` DATETIME NOT NULL,
+	PRIMARY KEY (`company_id`) USING BTREE,
+	UNIQUE INDEX `Index 2` (`company_api_key`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
